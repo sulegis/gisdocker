@@ -8,7 +8,7 @@ ENV iServer true
 # 安装iServer
 RUN apt-get update && apt-get install wget -y
 RUN wget http://gis-data.oss-cn-beijing.aliyuncs.com/image_iserver/ubuntu_public_deployiServer7C.sh -O /opt/deployiserver.sh
-RUN chmod +x /opt/deployiserver.sh && /opt/deployiserver.sh
+RUN /opt/deployiserver.sh
 # Container启动时立即运行iServer
 EXPOSE 8090
 ENTRYPOINT service supermap start
