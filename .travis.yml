@@ -6,6 +6,6 @@ services:
   - docker
 
 script:
-- cd ./iExpress && docker build -t supermap/iexpress:travis .
+- cd ./ipse_base && docker build -t supermap/ipse_base:travis .
 - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
-- docker push supermap/iexpress:travis
+- docker push supermap/ipse_base:travis
