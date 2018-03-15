@@ -1,8 +1,11 @@
 sudo: required
 
+language: ruby
+
 services:
   - docker
 
 script:
 - docker build -tag supermap/iexpress:travis build ./iExpress
+- docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
 - docker push supermap/iexpress:travis
