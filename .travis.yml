@@ -1,0 +1,8 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+- docker build -tag supermap/iexpress:travis build ./iExpress
+- docker push supermap/iexpress:travis
